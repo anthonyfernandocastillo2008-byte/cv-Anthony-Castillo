@@ -1,0 +1,255 @@
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #23404b;
+    background-color: white;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #087eae;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+}
+
+/* SECCION PRINCIPAL */
+.hero {
+    background-color: #e6f7fc;
+    padding: 80px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-texto {
+    max-width: 500px;
+
+    /* NIVEL 2: animacion de entrada */
+    animation: aparecer 1s ease forwards;
+}
+
+.etiqueta {
+    color: #087eae;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 45px;
+    color: #075985;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.imagen {
+    background-color: #087eae;
+    color: white;
+    text-align: center;
+    padding: 55px 35px;
+    border-radius: 20px;
+    animation: aparecer 1.4s ease forwards;
+}
+
+.imagen span {
+    font-size: 85px;
+}
+
+.imagen p {
+    margin-top: 10px;
+}
+
+/* BOTONES */
+.boton, button {
+    display: inline-block;
+    background-color: #087eae;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+
+    /* NIVEL 1: transicion */
+    transition: background-color 0.4s ease;
+}
+
+.boton:hover, button:hover {
+    background-color: #045477;
+}
+
+/* SECCIONES */
+.seccion {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.seccion h2 {
+    color: #087eae;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.seccion p {
+    line-height: 1.7;
+}
+
+.fondo {
+    background-color: #e6f7fc;
+}
+
+/* TARJETAS */
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 30%;
+}
+
+.tarjeta span {
+    font-size: 40px;
+}
+
+.tarjeta h3 {
+    color: #087eae;
+    margin: 15px 0;
+}
+
+/* TECNOLOGIAS */
+.tecnologias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tecnologias span {
+    background-color: #087eae;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+
+/* PARTICIPACION */
+.participa {
+    background-color: #075985;
+    color: white;
+    text-align: center;
+    padding: 50px 10%;
+}
+
+.participa h2 {
+    margin-bottom: 15px;
+}
+
+form {
+    max-width: 400px;
+    margin: 25px auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    background-color: #12a8c9;
+}
+
+#respuesta {
+    margin-top: 15px;
+}
+
+/* PIE DE PAGINA */
+footer {
+    background-color: #063b55;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* NIVEL 2: ANIMACION @KEYFRAMES */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* ADAPTACION A CELULARES */
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    .tecnologias {
+        flex-wrap: wrap;
+    }
+}
